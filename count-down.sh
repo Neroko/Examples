@@ -2,7 +2,7 @@
 
 clear
 
-lastday=`date -d "Aug 1" +%j`
+lastday=`date --date="Aug 1" +%j`
 today=`date +%j`
 days=$("$lastday" - "$today")
 
