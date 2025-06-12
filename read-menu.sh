@@ -15,24 +15,31 @@ EOF
 echo -n 'Enter selection [0-3]: '
 read -r sel
 
-case $sel in
+case "$sel" in
 	0)
  		echo "Program terminated."
    		;;
 	1)
- 		echo "Hostname: $HOSTNAME";
+ 		echo "Hostname: "$HOSTNAME"";
    		uptime;
 	 	;;
 	2)
- 		df -h
+ 		df \
+   			--human-readable
    		;;
 	3)
- 		if [ "$UID" = 0 ]; then
+ 		if [ "$UID" = "0" ]; then
    			echo "Home Space Utilization (All Users)"
-			du -sh /home/*
+			du \
+   				--summarize \
+       				--human-readable \
+	   			"/home/*"
 		else
 			echo "Home Space Utilization ($USER)"
-			du -sh "$HOME"
+			du \
+				--summarize \
+       				--human-readable \
+	   			"$HOME"
 		fi
   		;;
 	*)
