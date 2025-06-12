@@ -16,9 +16,16 @@ echo -n 'Enter selection [0-3]: '
 read -r sel
 
 case $sel in
-	0) echo "Program terminated.";;
-	1) echo "Hostname: $HOSTNAME"; uptime;;
-	2) df -h;;
+	0)
+ 		echo "Program terminated."
+   		;;
+	1)
+ 		echo "Hostname: $HOSTNAME";
+   		uptime;
+	 	;;
+	2)
+ 		df -h
+   		;;
 	3)
  		if [ "$UID" = 0 ]; then
    			echo "Home Space Utilization (All Users)"
@@ -27,7 +34,7 @@ case $sel in
 			echo "Home Space Utilization ($USER)"
 			du -sh "$HOME"
 		fi
-  	;;
+  		;;
 	*)
 		echo "Invalid entry." >&2
 		exit 1
