@@ -2,4 +2,8 @@
 
 echo -n "Enter your directory: "
 read -r x
-du -sh "$x"
+
+du \
+	--summarize \
+ 	--human-readable \
+	"$x"
