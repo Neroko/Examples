@@ -3,8 +3,18 @@
 name="$1"
 path="$2"
 
-tar -c -z -v -f ""$name".tar.gz" "$path"
+tar \
+  --create \
+  --gzip \
+  --verbose \
+  --file=""$name".tar.gz" \
+  "$path"
 
-gpg -c ""$name".tar.gz"
+gpg \
+  --symmetric \
+  ""$name".tar.gz"
 
-rm -r -f ""$name".tar.gz"
+rm \
+  --recursive \
+  --force \
+  ""$name".tar.gz"
