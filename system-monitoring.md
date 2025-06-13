@@ -1,5 +1,3 @@
-#!/bin/bash
-
 ### Linux System Monitoring
 
 ## Introduction to System Monitoring
