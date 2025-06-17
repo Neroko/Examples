@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script made to be ran on Android in program 'UserLAnd' running a 'Debian' system.
+# Script made to be ran on Android in program 'UserLAnd' running a 'Debian' OS system.
 
 sudo apt update
 
