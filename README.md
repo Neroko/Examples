@@ -8,7 +8,3 @@ To get and print weather based on a location: wttr
 
 To get your WAN ip address: ipify
 	https://www.ipify.org/
-
-To transfer files: transfer
-	https://transfer.sh/
- 
